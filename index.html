@@ -78,6 +78,8 @@ ul li:hover {
     border-radius: 5px;
     font-weight: bold;
     transition: transform 0.2s, box-shadow 0.3s;
+    cursor: pointer;
+    border: none;
 }
 .button:hover {
     transform: translateY(-3px);
@@ -130,8 +132,32 @@ footer {
         </a>
     </div>
     <div class="card">
-        <h3>Workshop</h3>
+        <h3>Web Login Page</h3>
         <p>Designed a responsive login page using HTML & CSS.</p>
+        <p style="background:#64748b; display:inline-block; padding:8px 12px; border-radius:5px;">Workshop</p>
+    </div>
+</section>
+
+<section>
+    <h2>Certificates</h2>
+    <div class="card">
+        <button id="showCertBtn" class="button">Show Certificates</button>
+        <div id="certificatesDiv" style="display:none; margin-top:15px;">
+            <div class="card">
+                <h3>ServiceNow CSA</h3>
+                <p>Certified System Administrator</p>
+                <a class="button" href="https://github.com/BhandariLakshmi1013/BhandariLakshmi1013/blob/main/ServiceNowCSA.pdf" target="_blank">
+                    View Certificate
+                </a>
+            </div>
+            <div class="card">
+                <h3>ServiceNow CAD</h3>
+                <p>Certified Application Developer</p>
+                <a class="button" href="https://github.com/BhandariLakshmi1013/BhandariLakshmi1013/blob/main/ServiceNowCAD.pdf" target="_blank">
+                    View Certificate
+                </a>
+            </div>
+        </div>
     </div>
 </section>
 
@@ -156,5 +182,20 @@ footer {
 <footer>
     <p>© 2026 Lakshmi Bhandari</p>
 </footer>
+
+<script>
+const btn = document.getElementById('showCertBtn');
+const certDiv = document.getElementById('certificatesDiv');
+btn.addEventListener('click', () => {
+    if(certDiv.style.display === 'none'){
+        certDiv.style.display = 'block';
+        btn.innerText = 'Hide Certificates';
+    } else {
+        certDiv.style.display = 'none';
+        btn.innerText = 'Show Certificates';
+    }
+});
+</script>
+
 </body>
 </html>
