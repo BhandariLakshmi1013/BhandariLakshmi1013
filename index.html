@@ -12,6 +12,8 @@ body {
     background: #0f172a;
     color: #f1f5f9;
 }
+
+/* Header */
 header {
     text-align: center;
     padding: 50px;
@@ -20,27 +22,56 @@ header {
 header h1 {
     color: #38bdf8;
 }
+
+/* Sections */
 section {
     padding: 40px;
     max-width: 900px;
     margin: auto;
 }
+
+/* Cards with Glow */
 .card {
     background: #1e293b;
     padding: 20px;
     margin: 15px 0;
     border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
+
+/* 🔥 Glow Effect */
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(56,189,248,0.6);
+}
+
+/* Buttons */
 .button {
     padding: 8px 12px;
     background: #38bdf8;
-    color: black;
+    color: #0f172a;
     text-decoration: none;
     border-radius: 5px;
     border: none;
     cursor: pointer;
     display: inline-block;
-    margin: 5px 5px 0 0;
+    margin: 5px;
+    font-weight: bold;
+    transition: transform 0.2s, box-shadow 0.3s;
+}
+
+/* 🔥 Button Glow */
+.button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(56,189,248,0.7);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #1e293b;
 }
 </style>
 </head>
