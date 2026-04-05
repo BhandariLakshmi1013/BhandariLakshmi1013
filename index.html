@@ -30,10 +30,6 @@ section {
     padding: 20px;
     margin: 15px 0;
     border-radius: 10px;
-    transition: 0.3s;
-}
-.card:hover {
-    transform: translateY(-5px);
 }
 .button {
     padding: 8px 12px;
@@ -43,12 +39,8 @@ section {
     border-radius: 5px;
     border: none;
     cursor: pointer;
-    margin-top: 10px;
-}
-img.project-img {
-    width: 100%;
-    border-radius: 10px;
-    margin: 10px 0;
+    display: inline-block;
+    margin: 5px 5px 0 0;
 }
 </style>
 </head>
@@ -89,21 +81,29 @@ img.project-img {
         <h3>ServiceNow Incident Management System</h3>
         <p>Includes Flow Designer, Email Notifications, and Business Rules.</p>
 
-        <button class="button" onclick="toggleProject()">Show Details</button>
+        <button class="button" onclick="toggleServiceNow()">Show Details</button>
 
-        <div id="projectDetails" style="display:none;">
-            <h4>Flow Designer</h4>
-            <img class="project-img" src="https://github.com/BhandariLakshmi1013/ServiceNow-Basic-Incident-Management-System/blob/main/1.jpeg?raw=true">
+        <div id="serviceNowDetails" style="display:none; margin-top:10px;">
 
-            <h4>Email Notification</h4>
-            <img class="project-img" src="https://github.com/BhandariLakshmi1013/ServiceNow-Basic-Incident-Management-System/blob/main/2.jpeg?raw=true">
+            <a class="button" href="https://github.com/BhandariLakshmi1013/ServiceNow-Basic-Incident-Management-System/blob/main/1.jpeg" target="_blank">
+                Flow Designer
+            </a>
 
-            <h4>Auto Priority</h4>
-            <a class="button" href="https://github.com/BhandariLakshmi1013/ServiceNow-Basic-Incident-Management-System/blob/main/javascript%20businss%20rule" target="_blank">View Script</a>
+            <a class="button" href="https://github.com/BhandariLakshmi1013/ServiceNow-Basic-Incident-Management-System/blob/main/2.jpeg" target="_blank">
+                Email Notification
+            </a>
+
+            <a class="button" href="https://github.com/BhandariLakshmi1013/ServiceNow-Basic-Incident-Management-System/blob/main/javascript%20businss%20rule" target="_blank">
+                Auto Priority
+            </a>
+
         </div>
 
         <br>
-        <a class="button" href="https://github.com/BhandariLakshmi1013/ServiceNow-Basic-Incident-Management-System" target="_blank">Full Project</a>
+
+        <a class="button" href="https://github.com/BhandariLakshmi1013/ServiceNow-Basic-Incident-Management-System" target="_blank">
+            Full Project
+        </a>
     </div>
 
     <!-- Workshop -->
@@ -117,13 +117,25 @@ img.project-img {
 <section>
     <h2>Certificates</h2>
     <div class="card">
+
         <button class="button" onclick="toggleCerts()">Show Certificates</button>
 
-        <div id="certs" style="display:none;">
-            <p>ServiceNow CSA</p>
-            <p>ServiceNow CAD</p>
-            <p>Core Java</p>
+        <div id="certs" style="display:none; margin-top:10px;">
+
+            <a class="button" href="https://github.com/BhandariLakshmi1013/BhandariLakshmi1013/blob/main/ServiceNowCSA.pdf" target="_blank">
+                ServiceNow CSA
+            </a>
+
+            <a class="button" href="https://github.com/BhandariLakshmi1013/BhandariLakshmi1013/blob/main/ServiceNowCAD.pdf" target="_blank">
+                ServiceNow CAD
+            </a>
+
+            <a class="button" href="https://github.com/BhandariLakshmi1013/BhandariLakshmi1013/blob/main/Java_certificate.pdf" target="_blank">
+                Core Java
+            </a>
+
         </div>
+
     </div>
 </section>
 
@@ -133,7 +145,7 @@ img.project-img {
         <a class="button" href="mailto:lakshmibhandari061011@gmail.com">Email</a>
         <a class="button" href="tel:+917997040245">Call</a>
         <a class="button" href="https://github.com/BhandariLakshmi1013" target="_blank">GitHub</a>
-        <a class="button" href="https://linkedin.com" target="_blank">LinkedIn</a>
+        <a class="button" href="https://www.linkedin.com/in/lakshmi-bhandari-1b88ba375/" target="_blank">LinkedIn</a>
     </div>
 </section>
 
@@ -142,16 +154,13 @@ img.project-img {
 </footer>
 
 <script>
-function toggleProject() {
-    let div = document.getElementById("projectDetails");
-    let btn = event.target;
+function toggleServiceNow() {
+    let div = document.getElementById("serviceNowDetails");
 
     if (div.style.display === "none") {
         div.style.display = "block";
-        btn.innerText = "Hide Details";
     } else {
         div.style.display = "none";
-        btn.innerText = "Show Details";
     }
 }
 
