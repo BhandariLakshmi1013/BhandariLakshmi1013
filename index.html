@@ -30,7 +30,7 @@ section {
     margin: auto;
 }
 
-/* Cards with Glow */
+/* Cards */
 .card {
     background: #1e293b;
     padding: 20px;
@@ -40,7 +40,7 @@ section {
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-/* 🔥 Glow Effect */
+/* Glow effect */
 .card:hover {
     transform: translateY(-8px);
     box-shadow: 0 10px 25px rgba(56,189,248,0.6);
@@ -61,10 +61,33 @@ section {
     transition: transform 0.2s, box-shadow 0.3s;
 }
 
-/* 🔥 Button Glow */
+/* Button glow */
 .button:hover {
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(56,189,248,0.7);
+}
+
+/* Skills */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill {
+    padding: 8px 14px;
+    background: #334155;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* Skill glow */
+.skill:hover {
+    transform: scale(1.1);
+    background: #38bdf8;
+    color: #0f172a;
+    box-shadow: 0 5px 15px rgba(56,189,248,0.8);
 }
 
 /* Footer */
@@ -93,7 +116,14 @@ footer {
 <section>
     <h2>Skills</h2>
     <div class="card">
-        Java | OOP | MySQL | HTML | CSS | ServiceNow
+        <div class="skills">
+            <span class="skill">Java</span>
+            <span class="skill">OOP</span>
+            <span class="skill">MySQL</span>
+            <span class="skill">HTML</span>
+            <span class="skill">CSS</span>
+            <span class="skill">ServiceNow</span>
+        </div>
     </div>
 </section>
 
@@ -187,22 +217,12 @@ footer {
 <script>
 function toggleServiceNow() {
     let div = document.getElementById("serviceNowDetails");
-
-    if (div.style.display === "none") {
-        div.style.display = "block";
-    } else {
-        div.style.display = "none";
-    }
+    div.style.display = (div.style.display === "none") ? "block" : "none";
 }
 
 function toggleCerts() {
     let div = document.getElementById("certs");
-
-    if (div.style.display === "none") {
-        div.style.display = "block";
-    } else {
-        div.style.display = "none";
-    }
+    div.style.display = (div.style.display === "none") ? "block" : "none";
 }
 </script>
 
