@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Bhandari Lakshmi Portfolio</title>
+
 <style>
 body {
     font-family: 'Arial', sans-serif;
@@ -98,7 +99,9 @@ footer {
 }
 </style>
 </head>
+
 <body>
+
 <header>
     <h1>Bhandari Lakshmi</h1>
     <p>Aspiring Java Developer | ServiceNow CSA & CAD</p>
@@ -124,6 +127,7 @@ footer {
 
 <section>
     <h2>Projects</h2>
+
     <div class="card">
         <h3>E-Attendance System</h3>
         <p>Developed using Java, OOP, Collections Framework, Exception Handling, and File I/O.</p>
@@ -131,17 +135,38 @@ footer {
             <img src="https://img.icons8.com/ios-glyphs/30/000000/github.png"/> View Project
         </a>
     </div>
+
     <div class="card">
         <h3>Workshop</h3>
         <p>Designed a responsive login page using HTML & CSS.</p>
     </div>
+
+    <!-- NEW PROJECT ADDED -->
+    <div class="card">
+        <h3>ServiceNow Incident Management System</h3>
+        <p>Built a basic Incident Management System in ServiceNow including incident creation, priority automation, business rules, and email notifications using Flow Designer.</p>
+
+        <ul>
+            <li>Incident Creation</li>
+            <li>Auto Priority</li>
+            <li>Email Notifications</li>
+            <li>Flow Designer</li>
+        </ul>
+
+        <a class="button" href="https://github.com/BhandariLakshmi1013/ServiceNow-Basic-Incident-Management-System" target="_blank">
+            <img src="https://img.icons8.com/ios-glyphs/30/000000/github.png"/> View Project
+        </a>
+    </div>
+
 </section>
 
 <section>
     <h2>Certificates</h2>
     <div class="card">
         <button id="showCertBtn" class="button">Show Certificates</button>
+
         <div id="certificatesDiv" style="display:none; margin-top:15px;">
+
             <div class="card">
                 <h3>ServiceNow CSA</h3>
                 <p>Certified System Administrator</p>
@@ -149,6 +174,7 @@ footer {
                     View Certificate
                 </a>
             </div>
+
             <div class="card">
                 <h3>ServiceNow CAD</h3>
                 <p>Certified Application Developer</p>
@@ -156,13 +182,15 @@ footer {
                     View Certificate
                 </a>
             </div>
+
             <div class="card">
                 <h3>Core Java Programming</h3>
                 <p>Completed with FAANG Tech Lab</p>
                 <a class="button" href="https://github.com/BhandariLakshmi1013/BhandariLakshmi1013/blob/main/Java_certificate.pdf" target="_blank">
-    View Certificate
+                    View Certificate
                 </a>
             </div>
+
         </div>
     </div>
 </section>
@@ -173,12 +201,15 @@ footer {
         <a class="button" href="mailto:lakshmibhandari061011@gmail.com">
             <img src="https://img.icons8.com/ios-filled/50/000000/new-post.png"/> Email
         </a>
+
         <a class="button" href="tel:+917997040245">
             <img src="https://img.icons8.com/ios-filled/50/000000/phone.png"/> Call
         </a>
+
         <a class="button" href="https://github.com/BhandariLakshmi1013" target="_blank">
             <img src="https://img.icons8.com/ios-glyphs/30/000000/github.png"/> GitHub
         </a>
+
         <a class="button" href="https://www.linkedin.com/in/lakshmi-bhandari-1b88ba375/" target="_blank">
             <img src="https://img.icons8.com/ios-filled/50/000000/linkedin.png"/> LinkedIn
         </a>
@@ -192,6 +223,7 @@ footer {
 <script>
 const btn = document.getElementById('showCertBtn');
 const certDiv = document.getElementById('certificatesDiv');
+
 btn.addEventListener('click', () => {
     if(certDiv.style.display === 'none'){
         certDiv.style.display = 'block';
