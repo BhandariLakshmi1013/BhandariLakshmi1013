@@ -21,7 +21,6 @@ header {
 header h1 {
     font-size: 50px;
     color: #38bdf8;
-    margin-bottom: 5px;
 }
 header p {
     font-size: 18px;
@@ -35,7 +34,6 @@ section {
 h2 {
     border-bottom: 2px solid #38bdf8;
     padding-bottom: 10px;
-    margin-bottom: 20px;
 }
 .card {
     background: #1e293b;
@@ -43,7 +41,7 @@ h2 {
     margin: 15px 0;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: 0.3s;
 }
 .card:hover {
     transform: translateY(-8px);
@@ -59,14 +57,6 @@ ul li {
     padding: 8px 12px;
     background: #334155;
     border-radius: 5px;
-    transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
-    cursor: default;
-}
-ul li:hover {
-    transform: scale(1.1);
-    background: #38bdf8;
-    color: #0f172a;
-    box-shadow: 0 4px 10px rgba(56,189,248,0.6);
 }
 .button {
     display: inline-flex;
@@ -78,24 +68,24 @@ ul li:hover {
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
-    transition: transform 0.2s, box-shadow 0.3s;
-    cursor: pointer;
-    border: none;
-}
-.button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(56,189,248,0.6);
 }
 .button img {
     width: 20px;
-    height: 20px;
     margin-right: 8px;
+}
+img.project-img {
+    width: 100%;
+    border-radius: 10px;
+    margin: 10px 0;
+    transition: transform 0.3s;
+}
+img.project-img:hover {
+    transform: scale(1.05);
 }
 footer {
     text-align: center;
     padding: 20px;
     background: #1e293b;
-    color: #94a3b8;
 }
 </style>
 </head>
@@ -110,7 +100,7 @@ footer {
 <section>
     <h2>About Me</h2>
     <div class="card">
-        <p>Passionate about learning Java and programming. Familiar with OOP concepts and currently learning Data Structures. Working on projects to gain hands-on coding experience.</p>
+        <p>Passionate about Java and problem solving. Skilled in OOP and currently learning Data Structures. Building real-world projects using ServiceNow and Java.</p>
     </div>
 </section>
 
@@ -128,34 +118,42 @@ footer {
 <section>
     <h2>Projects</h2>
 
+    <!-- Java Project -->
     <div class="card">
         <h3>E-Attendance System</h3>
-        <p>Developed using Java, OOP, Collections Framework, Exception Handling, and File I/O.</p>
+        <p>Developed using Java, OOP, Collections, Exception Handling, and File Handling.</p>
         <a class="button" href="https://github.com/BhandariLakshmi1013/Java_Project" target="_blank">
             <img src="https://img.icons8.com/ios-glyphs/30/000000/github.png"/> View Project
         </a>
     </div>
 
-    <div class="card">
-        <h3>Workshop</h3>
-        <p>Designed a responsive login page using HTML & CSS.</p>
-    </div>
-
-    <!-- NEW PROJECT ADDED -->
+    <!-- ServiceNow Project -->
     <div class="card">
         <h3>ServiceNow Incident Management System</h3>
-        <p>Built a basic Incident Management System in ServiceNow including incident creation, priority automation, business rules, and email notifications using Flow Designer.</p>
+        <p>Includes Flow Designer, Email Notifications, and Auto Priority using Business Rules.</p>
 
-        <ul>
-            <li>Incident Creation</li>
-            <li>Auto Priority</li>
-            <li>Email Notifications</li>
-            <li>Flow Designer</li>
-        </ul>
+        <h4>Flow Designer</h4>
+        <img class="project-img" src="https://github.com/BhandariLakshmi1013/ServiceNow-Basic-Incident-Management-System/blob/main/1.jpeg?raw=true">
+
+        <h4>Email Notification</h4>
+        <img class="project-img" src="https://github.com/BhandariLakshmi1013/ServiceNow-Basic-Incident-Management-System/blob/main/2.jpeg?raw=true">
+
+        <h4>Auto Priority (Business Rule)</h4>
+        <a class="button" href="https://github.com/BhandariLakshmi1013/ServiceNow-Basic-Incident-Management-System/blob/main/javascript%20businss%20rule" target="_blank">
+            <img src="https://img.icons8.com/ios-glyphs/30/000000/github.png"/> View Script
+        </a>
+
+        <br><br>
 
         <a class="button" href="https://github.com/BhandariLakshmi1013/ServiceNow-Basic-Incident-Management-System" target="_blank">
-            <img src="https://img.icons8.com/ios-glyphs/30/000000/github.png"/> View Project
+            <img src="https://img.icons8.com/ios-glyphs/30/000000/github.png"/> Full Project
         </a>
+    </div>
+
+    <!-- Workshop -->
+    <div class="card">
+        <h3>Workshop</h3>
+        <p>Responsive login page using HTML & CSS.</p>
     </div>
 
 </section>
@@ -163,32 +161,23 @@ footer {
 <section>
     <h2>Certificates</h2>
     <div class="card">
-        <button id="showCertBtn" class="button">Show Certificates</button>
+        <button id="btn" class="button">Show Certificates</button>
 
-        <div id="certificatesDiv" style="display:none; margin-top:15px;">
+        <div id="certs" style="display:none;">
 
             <div class="card">
                 <h3>ServiceNow CSA</h3>
-                <p>Certified System Administrator</p>
-                <a class="button" href="https://github.com/BhandariLakshmi1013/BhandariLakshmi1013/blob/main/ServiceNowCSA.pdf" target="_blank">
-                    View Certificate
-                </a>
+                <a class="button" href="https://github.com/BhandariLakshmi1013/BhandariLakshmi1013/blob/main/ServiceNowCSA.pdf" target="_blank">View</a>
             </div>
 
             <div class="card">
                 <h3>ServiceNow CAD</h3>
-                <p>Certified Application Developer</p>
-                <a class="button" href="https://github.com/BhandariLakshmi1013/BhandariLakshmi1013/blob/main/ServiceNowCAD.pdf" target="_blank">
-                    View Certificate
-                </a>
+                <a class="button" href="https://github.com/BhandariLakshmi1013/BhandariLakshmi1013/blob/main/ServiceNowCAD.pdf" target="_blank">View</a>
             </div>
 
             <div class="card">
-                <h3>Core Java Programming</h3>
-                <p>Completed with FAANG Tech Lab</p>
-                <a class="button" href="https://github.com/BhandariLakshmi1013/BhandariLakshmi1013/blob/main/Java_certificate.pdf" target="_blank">
-                    View Certificate
-                </a>
+                <h3>Core Java</h3>
+                <a class="button" href="https://github.com/BhandariLakshmi1013/BhandariLakshmi1013/blob/main/Java_certificate.pdf" target="_blank">View</a>
             </div>
 
         </div>
@@ -198,21 +187,10 @@ footer {
 <section>
     <h2>Contact</h2>
     <div class="card">
-        <a class="button" href="mailto:lakshmibhandari061011@gmail.com">
-            <img src="https://img.icons8.com/ios-filled/50/000000/new-post.png"/> Email
-        </a>
-
-        <a class="button" href="tel:+917997040245">
-            <img src="https://img.icons8.com/ios-filled/50/000000/phone.png"/> Call
-        </a>
-
-        <a class="button" href="https://github.com/BhandariLakshmi1013" target="_blank">
-            <img src="https://img.icons8.com/ios-glyphs/30/000000/github.png"/> GitHub
-        </a>
-
-        <a class="button" href="https://www.linkedin.com/in/lakshmi-bhandari-1b88ba375/" target="_blank">
-            <img src="https://img.icons8.com/ios-filled/50/000000/linkedin.png"/> LinkedIn
-        </a>
+        <a class="button" href="mailto:lakshmibhandari061011@gmail.com">Email</a>
+        <a class="button" href="tel:+917997040245">Call</a>
+        <a class="button" href="https://github.com/BhandariLakshmi1013" target="_blank">GitHub</a>
+        <a class="button" href="https://www.linkedin.com/in/lakshmi-bhandari-1b88ba375/" target="_blank">LinkedIn</a>
     </div>
 </section>
 
@@ -221,18 +199,18 @@ footer {
 </footer>
 
 <script>
-const btn = document.getElementById('showCertBtn');
-const certDiv = document.getElementById('certificatesDiv');
+const btn = document.getElementById('btn');
+const certs = document.getElementById('certs');
 
-btn.addEventListener('click', () => {
-    if(certDiv.style.display === 'none'){
-        certDiv.style.display = 'block';
-        btn.innerText = 'Hide Certificates';
+btn.onclick = () => {
+    if(certs.style.display === "none"){
+        certs.style.display = "block";
+        btn.innerText = "Hide Certificates";
     } else {
-        certDiv.style.display = 'none';
-        btn.innerText = 'Show Certificates';
+        certs.style.display = "none";
+        btn.innerText = "Show Certificates";
     }
-});
+}
 </script>
 
 </body>
